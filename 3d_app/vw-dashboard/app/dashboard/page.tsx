@@ -38,19 +38,19 @@ const Dashboard = () => {
       icon: Car,
       content: (
         <div className="space-y-6">
-          <div className="h-[400px] w-full bg-gradient-to-b from-gray-50 to-gray-100 rounded-lg overflow-hidden p-4">
+          <div className="h-[400px] w-full bg-gradient-to-b from-gray-700 to-gray-900 rounded-lg overflow-hidden p-4">
             <VWID4SVG />
           </div>
           <div className="grid grid-cols-3 gap-4">
-            <div className="p-4 bg-white shadow-md rounded-lg">
+            <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
               <h4 className="font-semibold">Vehicle Status</h4>
-              <p className="text-green-600">All Systems Normal</p>
+              <p className="text-green-400">All Systems Normal</p>
             </div>
-            <div className="p-4 bg-white shadow-md rounded-lg">
+            <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
               <h4 className="font-semibold">Next Service</h4>
               <p>In 3,000 km</p>
             </div>
-            <div className="p-4 bg-white shadow-md rounded-lg">
+            <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
               <h4 className="font-semibold">Battery Level</h4>
               <p>95%</p>
             </div>
@@ -64,17 +64,17 @@ const Dashboard = () => {
       content: (
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
-            <div className="p-4 bg-gray-50 shadow-md rounded-lg">
+            <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
               <h4 className="font-semibold mb-2">Engine Health</h4>
-              <div className="text-2xl font-bold text-green-600">98%</div>
+              <div className="text-2xl font-bold text-green-400">98%</div>
             </div>
-            <div className="p-4 bg-gray-50 shadow-md rounded-lg">
+            <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
               <h4 className="font-semibold mb-2">Battery Status</h4>
-              <div className="text-2xl font-bold text-green-600">95%</div>
+              <div className="text-2xl font-bold text-green-400">95%</div>
             </div>
           </div>
-          <div className="p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded-lg">
-            <p>Next maintenance scheduled in 3,000 km</p>
+          <div className="p-4 bg-yellow-800 border-l-4 border-yellow-400 rounded-lg">
+            <p className="text-white">Next maintenance scheduled in 3,000 km</p>
           </div>
         </div>
       )
@@ -84,7 +84,7 @@ const Dashboard = () => {
       icon: Users,
       content: (
         <div className="space-y-4">
-          <div className="p-4 bg-white shadow-md rounded-lg">
+          <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
             <h4 className="font-semibold mb-2">Personalization Settings</h4>
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -105,10 +105,10 @@ const Dashboard = () => {
       icon: Shield,
       content: (
         <div className="space-y-4">
-          <div className="p-4 bg-red-100 border-l-4 border-red-500 rounded-lg">
+          <div className="p-4 bg-red-800 text-white border-l-4 border-red-500 rounded-lg">
             <p>System security status: Protected</p>
           </div>
-          <div className="p-4 bg-white shadow-md rounded-lg">
+          <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
             <h4 className="font-semibold mb-2">Last Security Scan</h4>
             <p>Today, 14:30</p>
           </div>
@@ -120,9 +120,9 @@ const Dashboard = () => {
       icon: FileText,
       content: (
         <div className="space-y-4">
-          <div className="p-4 bg-white shadow-md rounded-lg">
+          <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
             <h4 className="font-semibold mb-2">Emissions Status</h4>
-            <div className="text-green-600">Compliant</div>
+            <div className="text-green-400">Compliant</div>
           </div>
         </div>
       )
@@ -133,11 +133,11 @@ const Dashboard = () => {
       content: (
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
-            <div className="p-4 bg-white shadow-md rounded-lg">
+            <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
               <h4 className="font-semibold mb-2">Nearest Station</h4>
               <p>2.5 km away</p>
             </div>
-            <div className="p-4 bg-white shadow-md rounded-lg">
+            <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
               <h4 className="font-semibold mb-2">Range</h4>
               <p>350 km</p>
             </div>
@@ -150,7 +150,7 @@ const Dashboard = () => {
       icon: Brain,
       content: (
         <div className="space-y-4">
-          <div className="p-4 bg-white shadow-md rounded-lg">
+          <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
             <h4 className="font-semibold mb-2">Virtual Assistant</h4>
             <button className="bg-blue-600 text-white px-4 py-2 rounded-lg">
               Start Chat
@@ -162,13 +162,13 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
+    <div className="min-h-screen bg-black text-white p-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">Volkswagen Group Dashboard</h1>
           <div className="flex items-center space-x-4">
             <button className="relative">
-              <Bell className="w-6 h-6" />
+              <Bell className="w-6 h-6 text-white" />
               <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
                 {notifications.length}
               </span>
@@ -185,20 +185,20 @@ const Dashboard = () => {
                 className={`w-full flex items-center justify-between p-4 rounded-lg ${
                   activeSection === key
                     ? 'bg-blue-600 text-white'
-                    : 'bg-white hover:bg-gray-50'
+                    : 'bg-gray-800 hover:bg-gray-700'
                 }`}
               >
                 <div className="flex items-center space-x-3">
-                  {React.createElement(sections[key].icon, { className: "w-5 h-5" })}
+                  {React.createElement(sections[key].icon, { className: "w-5 h-5 text-white" })}
                   <span>{sections[key].title}</span>
                 </div>
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-5 h-5 text-white" />
               </button>
             ))}
           </div>
 
           <div className="col-span-9">
-            <div className="p-6 bg-white shadow-md rounded-lg">
+            <div className="p-6 bg-gray-800 text-white shadow-md rounded-lg">
               <h2 className="text-2xl font-bold mb-6">
                 {sections[activeSection].title}
               </h2>
