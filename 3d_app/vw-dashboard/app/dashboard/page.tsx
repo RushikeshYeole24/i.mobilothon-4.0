@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"; 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
@@ -84,33 +85,57 @@ const Dashboard = () => {
       icon: Users,
       content: (
         <div className="space-y-4">
+          
+    
+          {/* Maintenance Prediction */}
           <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
-            <h4 className="font-semibold mb-2">Personalization Settings</h4>
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <span>Seat Position Memory</span>
-                <Settings className="w-5 h-5" />
-              </div>
-              <div className="flex items-center justify-between">
-                <span>Climate Preferences</span>
-                <Settings className="w-5 h-5" />
-              </div>
-            </div>
+            <h4 className="font-semibold mb-2">Maintenance Prediction</h4>
+            <p>Probability of Maintenance Required: <strong>5.00%</strong></p> {/* Static value from the Streamlit dashboard */}
           </div>
+    
+          {/* Component Temperature */}
+          <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
+            <h4 className="font-semibold mb-2">Component Temperature Over Time</h4>
+            <img src="customergraph.jpg" alt="Component Temperature Graph" /> {/* Replace with actual graph image */}
+          </div>
+    
+          
         </div>
       )
     },
+    
     security: {
       title: 'Cybersecurity',
       icon: Shield,
       content: (
         <div className="space-y-4">
+          {/* System Security Status */}
           <div className="p-4 bg-red-800 text-white border-l-4 border-red-500 rounded-lg">
-            <p>System security status: Protected</p>
+            <p>System security status: <strong>Protected</strong></p>
           </div>
+    
+          {/* Last Security Scan */}
           <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
             <h4 className="font-semibold mb-2">Last Security Scan</h4>
-            <p>Today, 14:30</p>
+            <p>Today, 14:30</p> {/* Static value for the last security scan time */}
+          </div>
+    
+          {/* Anomalies Detected */}
+          <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
+            <h4 className="font-semibold mb-2">Anomalies Detected (This Month)</h4>
+            <p>Static Value: <strong>150</strong> anomalies detected</p> {/* Static value for anomalies detected */}
+          </div>
+    
+          {/* Suspicious Activities Blocked */}
+          <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
+            <h4 className="font-semibold mb-2">Suspicious Activities Blocked (This Month)</h4>
+            <p>Static Value: <strong>100</strong> suspicious activities blocked</p> {/* Static value for suspicious activities blocked */}
+          </div>
+    
+          {/* Cyberattacks Prevented */}
+          <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
+            <h4 className="font-semibold mb-2">Cyberattacks Prevented (This Month)</h4>
+            <p>Static Value: <strong>50</strong> cyberattacks prevented</p> {/* Static value for cyberattacks prevented */}
           </div>
         </div>
       )
@@ -120,13 +145,30 @@ const Dashboard = () => {
       icon: FileText,
       content: (
         <div className="space-y-4">
+          {/* Emissions Status */}
           <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
             <h4 className="font-semibold mb-2">Emissions Status</h4>
             <div className="text-green-400">Compliant</div>
           </div>
+    
+          {/* New Regulations */}
+          
+    
+          {/* Compliance Updates */}
+          
+    
+          {/* Non-Compliance Cases */}
+          <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
+            <h4 className="font-semibold mb-2">Non-Compliance Cases</h4>
+            <p><strong>10</strong> non-compliance cases reported this quarter.</p>
+            <p className="text-red-400">Status: Under Investigation</p>
+            <img src="/regulations.jpg" alt="Non-Compliance Cases Graph" className="rounded-lg shadow-md" />
+          </div>
         </div>
       )
     },
+    
+    
     charging: {
       title: 'Charging Infrastructure',
       icon: Battery,
@@ -137,14 +179,38 @@ const Dashboard = () => {
               <h4 className="font-semibold mb-2">Nearest Station</h4>
               <p>2.5 km away</p>
             </div>
+            
             <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
               <h4 className="font-semibold mb-2">Range</h4>
               <p>350 km</p>
             </div>
           </div>
+    
+          {/* Display the graph of charging stations */}
+          <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
+            <h4 className="font-semibold mb-2">Optimal Charging Station Locations</h4>
+            <img src="/map.jpg" alt="Charging Stations Graph" />
+          </div>
+    
+          {/* Cluster Information */}
+          <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
+            <h4 className="font-semibold mb-2">Number of Charging Stations</h4>
+            <p>{5} Charging Stations</p>
+          </div>
+    
+          <div className="p-4 bg-gray-800 text-white shadow-md rounded-lg">
+            <h4 className="font-semibold mb-2">Energy Load Distribution</h4>
+            <ul>
+              <li>Station 1: 500 kW</li>
+              <li>Station 2: 450 kW</li>
+              <li>Station 3: 600 kW</li>
+            </ul>
+          </div>
         </div>
       )
     },
+    
+    
     ai: {
       title: 'AI Service Support',
       icon: Brain,
